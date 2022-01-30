@@ -9,32 +9,64 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'Enter project title',
+            message: 'Enter project title (required)',
+            validate: titleInput => {
+                if (titleInput) {
+                    return true;
+                } else {
+                    console.log('Project title required');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'description',
-            message: 'Enter description of your project',
+            message: 'Enter a short description explaining the what, why, and how of your project (required)',
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                } else {
+                    console.log('Project description required');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'install',
-            message: 'Enter installation instructions',
+            message: 'Enter the steps required to install your project (required)',
+            validate: installInput => {
+                if (installInput) {
+                    return true;
+                } else {
+                    console.log('Installation steps required');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'usage',
-            message: 'Enter usage information',
+            message: 'Enter instructions and examples for use (required)',
+            validate: usageInput => {
+                if (usageInput) {
+                    return true;
+                } else {
+                    console.log('Project instructions required');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'contribute',
-            message: 'Enter contributors if any',
+            message: 'List your collaborators, if any, with links to their GitHub profiles',
         },
         {
             type: 'input',
             name: 'test',
-            message: 'Enter test guidelines',
+            message: 'Write tests for your application',
         },
         {
             type: 'list',
@@ -45,15 +77,33 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'github',
-            message: 'Enter your GitHub username',
+            message: 'Enter your GitHub username (required)',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log('GitHub username required');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: 'Enter your email address'
+            message: 'Enter your email address (required)',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Email address required');
+                    return false;
+                }
+            }
         }
     ]);
 };
+
+promptUser().then(answers => console.log(answers))
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
