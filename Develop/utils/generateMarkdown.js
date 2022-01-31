@@ -18,7 +18,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (license !== 'no license') {
     return `
-    [${license}](https://choosealicense.com/licenses/)
+    [${license}](https://choosealicense.com/licenses/${license})
       `;
     } else {
       return ' ';
@@ -31,7 +31,9 @@ function renderLicenseSection(license) {
   if (license !== 'no license') {
     return `
     ## [License](#license)
+
     Project license:
+    
     ${renderLicenseLink(license)}
       `;
     } else {
@@ -75,9 +77,7 @@ function generateMarkdown(data) {
 
   ${data.test}
 
-  ## [License](#license)
-
-  ${data.license}
+  ${renderLicenseSection(data.license)}
 
   ## Questions
 
