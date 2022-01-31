@@ -36,6 +36,8 @@ The application will be invoked by using the following command:
 
 The application will present you with a series of prompts and will generate a README.md file based on the responses you provide. It is located in ./dist directory. 
 
+Demo link: https://watch.screencastify.com/v/oMsJwX5qQCRwEdSE7sOJ
+
 ## License
 
 © Buyankhishig Jamsran, Rice University Coding Boot Camp
