@@ -102,17 +102,20 @@ const promptUser = [
 ];
 
 // TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {
-    fs.writeFile(`./dist/${fileName}`, generateMarkdown(data), err => err && console.log(err));
-};
+const writeToFile = readmeData => {
+    fs.writeFileSync('./dist/README.md', readmeData)
+}
 
 // TODO: Create a function to initialize app
 const init = () => {
     return inquirer.prompt(promptUser)
     .then(readmeData => {
-        console.log(readmeData);
-    });
+        Response = readmeData
+        return Response;
+    })
 };
 
 // Function call to initialize app
-init();
+init()
+    .then(Response => {return generateMarkdown(Response)})
+    .then(writeToFile)
