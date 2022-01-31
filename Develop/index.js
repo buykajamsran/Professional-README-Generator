@@ -102,15 +102,15 @@ const promptUser = [
 ];
 
 // TODO: Create a function to write README file
-const writeToFile = readmeData => {
-    fs.writeFileSync('./dist/README.md', readmeData)
+const writeToFile = data => {
+    fs.writeFileSync('./dist/README.md', data)
 }
 
 // TODO: Create a function to initialize app
 const init = () => {
     return inquirer.prompt(promptUser)
-    .then(readmeData => {
-        Response = readmeData
+    .then(data => {
+        Response = data
         return Response;
     })
 };
