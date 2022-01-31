@@ -32,7 +32,8 @@ The application will be invoked by using the following command:
 
 "node index.js"
 
-![alt text](./develop/assets/images/terminal-demo.png)
+md
+![alt text](assets/images/terminal-demo.png)
 
 The application will present you with a series of prompts and will generate a README.md file based on the responses you provide. It is located in ./dist directory. 
 
