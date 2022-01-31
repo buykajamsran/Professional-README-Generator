@@ -71,7 +71,7 @@ const promptUser = [
         type: 'list',
         name: 'license',
         message: 'Choose a licence for your project',
-        choices: ['MIT', 'none'],
+        choices: ['mit', 'apache', 'boost', 'none'],
     },
     {
         type: 'input',
