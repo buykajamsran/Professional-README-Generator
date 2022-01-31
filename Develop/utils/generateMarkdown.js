@@ -27,27 +27,27 @@ function generateMarkdown(data) {
   * [Tests](#tests)
   * [License](#license)
   
-  ## [Description](#table-of-contents)
+  ## [Description](#description)
 
   ${data.description}
 
-  ## [Installation](#table-of-contents)
+  ## [Installation](#installation)
 
   ${data.install}
 
-  ## [Usage](#table-of-contents)
+  ## [Usage](#usage)
 
   ${data.usage}
 
-  ## [Contribution](#table-of-contents)
+  ## [Contribution](#contribution)
 
   ${data.contribute}
 
-  ## [Tests](#table-of-contents)
+  ## [Tests](#tests)
 
   ${data.test}
 
-  ## [License](#table-of-contents)
+  ## [License](#license)
 
   ${data.license}
 
