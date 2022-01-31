@@ -30,7 +30,6 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license !== 'no license') {
     return `
-    ## [License](#license)
 
     Project license:
     
@@ -77,13 +76,15 @@ function generateMarkdown(data) {
 
   ${data.test}
 
+  ## [License](#license)
+
   ${renderLicenseSection(data.license)}
 
   ## Questions
 
   Please contact me using the following links:
 
-  [GitHub](https://github.com/${data.github})
+  [GitHub: ${data.github}](https://github.com/${data.github})
 
   [Email: ${data.email}](mailto:${data.email})
 `;
